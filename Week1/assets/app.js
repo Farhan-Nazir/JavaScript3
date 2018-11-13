@@ -1,6 +1,7 @@
 "use strict";
+let username = "HackYourFuture";
 let mainRepo;
-let url = "https://api.github.com/users/HackYourFuture/repos";
+let url = `https://api.github.com/users/${username}/repos`;
 let ul = document.getElementById("list");
 let repo_title = document.getElementById("card-title");
 let repo_description = document.getElementById("card-description");
