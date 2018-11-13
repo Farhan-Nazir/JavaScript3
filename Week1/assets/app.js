@@ -59,6 +59,10 @@ function getContributors(repo) {
       console.log(data);
      
      data.map( e => {
+       let a = document.createElement('a');
+       a.setAttribute('target','_blank');
+       a.href = e.html_url;
+       
         let li = document.createElement("li");
         li.className ="list-group-item d-flex justify-content-between align-items-center";
         let title = document.createElement("h6");
@@ -74,8 +78,8 @@ function getContributors(repo) {
         title.innerHTML = e.login;
         li.appendChild(title);
         li.appendChild(span);
-        
-        ul.appendChild(li);
+        a.appendChild(li)
+        ul.appendChild(a);
       });
     })
     .catch(error => console.error(error));
