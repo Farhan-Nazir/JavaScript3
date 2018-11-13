@@ -76,26 +76,7 @@ function getContributors(repo) {
         li.appendChild(span);
         
         ul.appendChild(li);
-      }) 
-
-      /*for (let i = 0; i < data.length; i++) {
-        let title = document.getElementById("title");
-        let span = document.createElement("span");
-        span.className = "badge badge-primary badge-pill"
-        span.appendChild(document.createTextNode(data[i].contributions));
-        let li = document.createElement("li");
-        li.className ="list-group-item d-flex justify-content-between align-items-center";
-        let img = document.createElement('img');
-        img.src = data[i].avatar_url;
-        img.setAttribute("width", "50");
-        img.setAttribute("height", "50");
-        img.setAttribute("alt", data[i].login);
-        li.appendChild(img);
-        title.innerHTML = data[i].login
-        li.appendChild(title);
-        ul.appendChild(li);
-      }  */
-      console.log(data[0].login);
+      });
     })
     .catch(error => console.error(error));
 }
